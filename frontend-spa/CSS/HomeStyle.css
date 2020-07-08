@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&family=Open+Sans&display=swap');
+<<<<<<< HEAD
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
@@ -197,4 +198,30 @@ display: table;
     margin: 15px 40px 10px;
     font-size: 32px;
     letter-spacing: 8px;
+=======
+​
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+​
+body
+{
+    background-color: rgb(112, 19, 199);
+}
+
+.headercontent
+{
+    font-family: 'Darker Grotesque', sans-serif;
+}
+​
+.headercontent .nav
+{
+    font-family: 'Open Sans', sans-serif; 
+}
+​
+.headercontent iframe
+{
+    display: flex;
+    flex-wrap: nowrap;
+    max-height: 768;
+    width: 1366;
+>>>>>>> 2742041cc08025e87669e59362ec192ab9bbb66a
 }
