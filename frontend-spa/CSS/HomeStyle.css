@@ -24,3 +24,10 @@ body
     max-height: 768;
     width: 1366;
 }
+li {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    /* alink= white;
+    vlink=white; */
+}
