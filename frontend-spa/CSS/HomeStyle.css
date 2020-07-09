@@ -1,22 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&family=Open+Sans&display=swap');
-<<<<<<< HEAD
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-
 body
 {
     background-color:#000;
     transition:0.7s ease;
     scroll-behavior: smooth;
 }
-
+​
 .banner{
     width:100%;
     height: 100vh;
     overflow: hidden;   
 }
-
+​
 .banner video
 {
     margin-top: 200px;
@@ -28,6 +22,7 @@ body
     width: 100%;
     justify-content: center;
 }
+
 .banner ul
 {
     display: flex;
@@ -39,7 +34,7 @@ body
     font-family: 'Open Sans', sans-serif; 
     color: rgb(255, 9, 181)
 }
-
+​
 .banner li
 {
     display: flex;
@@ -125,7 +120,7 @@ display: table;
     background-position: center;
     background-repeat: no-repeat;
 }
-
+​
 .grid-img3
 {
     background-image:
@@ -134,7 +129,7 @@ display: table;
     background-position: center;
     background-repeat: no-repeat;
 }
-
+​
 .grid-img4
 {
     background-image:
@@ -170,7 +165,7 @@ display: table;
     height: 250px;
     width: 100%;
   }
-
+​
   .footer .logo-text
   {
     letter-spacing: 8px;
@@ -179,7 +174,7 @@ display: table;
     text-align: left;
     margin:40px;
   }
-
+​
   .footer ul
   {
     display: flex;
@@ -191,6 +186,7 @@ display: table;
     font-family: 'Open Sans', sans-serif; 
     color: rgb(255, 9, 181)
   }
+
 .footer li{
     display: flex;
     list-style: none;
@@ -198,30 +194,4 @@ display: table;
     margin: 15px 40px 10px;
     font-size: 32px;
     letter-spacing: 8px;
-=======
-​
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-​
-body
-{
-    background-color: rgb(112, 19, 199);
-}
-
-.headercontent
-{
-    font-family: 'Darker Grotesque', sans-serif;
-}
-​
-.headercontent .nav
-{
-    font-family: 'Open Sans', sans-serif; 
-}
-​
-.headercontent iframe
-{
-    display: flex;
-    flex-wrap: nowrap;
-    max-height: 768;
-    width: 1366;
->>>>>>> 2742041cc08025e87669e59362ec192ab9bbb66a
 }
