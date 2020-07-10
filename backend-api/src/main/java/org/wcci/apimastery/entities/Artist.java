@@ -58,4 +58,42 @@ public class Artist {
     public Collection<Album> getAlbums() {
         return albums;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Artist artist = (Artist) o;
+
+        if (id != artist.id) return false;
+        if (age != artist.age) return false;
+        if (name != null ? !name.equals(artist.name) : artist.name != null) return false;
+        if (recordLabel != null ? !recordLabel.equals(artist.recordLabel) : artist.recordLabel != null) return false;
+        if (homeTown != null ? !homeTown.equals(artist.homeTown) : artist.homeTown != null) return false;
+        return artistImage != null ? artistImage.equals(artist.artistImage) : artist.artistImage == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + age;
+        result = 31 * result + (recordLabel != null ? recordLabel.hashCode() : 0);
+        result = 31 * result + (homeTown != null ? homeTown.hashCode() : 0);
+        result = 31 * result + (artistImage != null ? artistImage.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Artist{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", recordLabel='" + recordLabel + '\'' +
+                ", homeTown='" + homeTown + '\'' +
+                ", artistImage='" + artistImage + '\'' +
+                '}';
+    }
 }

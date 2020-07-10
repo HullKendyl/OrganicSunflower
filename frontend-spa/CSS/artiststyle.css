@@ -1,0 +1,63 @@
+.artist-profile
+{
+    background-image: url("/Images/TheBeetles.png");
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.artist
+{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 10px;
+}
+
+h6
+{
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-bottom: 0px;
+}
+
+h1{
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-top: 0px;
+}
+
+h3{
+    margin-left: 10px;
+}
+
+.artist-info ul
+{
+    list-style: none;
+}
+
+.artist-albums ol
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+.album-div
+{
+    padding: 10px;
+}
+.span-div
+{
+    text-align: center;
+}
+
+img
+{
+    width: 200px;
+    height: 200px;
+}

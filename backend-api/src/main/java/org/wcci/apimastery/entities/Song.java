@@ -51,4 +51,42 @@ public class Song {
     public String getSongLink() {
         return songLink;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Song song = (Song) o;
+
+        if (id != song.id) return false;
+        if (songTitle != null ? !songTitle.equals(song.songTitle) : song.songTitle != null) return false;
+        if (songDuration != null ? !songDuration.equals(song.songDuration) : song.songDuration != null) return false;
+        if (songLink != null ? !songLink.equals(song.songLink) : song.songLink != null) return false;
+        if (songImage != null ? !songImage.equals(song.songImage) : song.songImage != null) return false;
+        return album != null ? album.equals(song.album) : song.album == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (songTitle != null ? songTitle.hashCode() : 0);
+        result = 31 * result + (songDuration != null ? songDuration.hashCode() : 0);
+        result = 31 * result + (songLink != null ? songLink.hashCode() : 0);
+        result = 31 * result + (songImage != null ? songImage.hashCode() : 0);
+        result = 31 * result + (album != null ? album.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "id=" + id +
+                ", songTitle='" + songTitle + '\'' +
+                ", songDuration='" + songDuration + '\'' +
+                ", songLink='" + songLink + '\'' +
+                ", songImage='" + songImage + '\'' +
+                ", album=" + album +
+                '}';
+    }
 }

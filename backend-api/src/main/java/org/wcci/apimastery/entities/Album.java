@@ -49,4 +49,41 @@ public class Album {
     public Collection<Song> getSongs() {
         return songs;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Album album = (Album) o;
+
+        if (id != album.id) return false;
+        if (albumTitle != null ? !albumTitle.equals(album.albumTitle) : album.albumTitle != null) return false;
+        if (recordLabel != null ? !recordLabel.equals(album.recordLabel) : album.recordLabel != null) return false;
+        if (albumImage != null ? !albumImage.equals(album.albumImage) : album.albumImage != null) return false;
+        return artist != null ? artist.equals(album.artist) : album.artist == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (albumTitle != null ? albumTitle.hashCode() : 0);
+        result = 31 * result + (recordLabel != null ? recordLabel.hashCode() : 0);
+        result = 31 * result + (albumImage != null ? albumImage.hashCode() : 0);
+        result = 31 * result + (artist != null ? artist.hashCode() : 0);
+        return result;
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "id=" + id +
+                ", albumTitle='" + albumTitle + '\'' +
+                ", recordLabel='" + recordLabel + '\'' +
+                ", albumImage='" + albumImage + '\'' +
+                ", artist=" + artist +
+                '}';
+    }
 }
