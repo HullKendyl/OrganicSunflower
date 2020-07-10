@@ -1,4 +1,4 @@
-package org.wcci.apimastery.repositories;
+package org.wcci.apimastery.storage.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.wcci.apimastery.entities.Album;
