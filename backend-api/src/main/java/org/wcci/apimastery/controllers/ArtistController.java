@@ -13,4 +13,7 @@ public class ArtistController {
         this.artistStorage = artistStorage;
         this.albumStorage = albumStorage;
     }
+
+
+
 }
