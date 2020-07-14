@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 import org.wcci.apimastery.entities.Album;
 import org.wcci.apimastery.entities.Artist;
 import org.wcci.apimastery.entities.Song;
+import org.wcci.apimastery.storage.AlbumStorage;
+import org.wcci.apimastery.storage.ArtistStorage;
+import org.wcci.apimastery.storage.SongStorage;
 import org.wcci.apimastery.storage.repositories.AlbumRepository;
 import org.wcci.apimastery.storage.repositories.ArtistRepository;
 import org.wcci.apimastery.storage.repositories.SongRepository;
@@ -14,11 +17,11 @@ import org.wcci.apimastery.storage.repositories.SongRepository;
 public class Populator implements CommandLineRunner {
 
     @Autowired
-    AlbumRepository albumRepo;
+    AlbumStorage albumStorage;
     @Autowired
-    ArtistRepository artistRepo;
+    ArtistStorage artistStorage;
     @Autowired
-    SongRepository songRepo;
+    SongStorage songStorage;
 
     @Override
     public void run(String... args) throws Exception {
@@ -28,11 +31,11 @@ public class Populator implements CommandLineRunner {
         Artist artist4 = new Artist("Lady Gaga", 13, "Interscope Records", "New York City" , "https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fraw.githubusercontent.com%2F2020-Summer-Cohort%2Fartists-albums-and-songs-codingforte%2Fdev%2Ffrontend-spa%2Fimages%2FLady%2520Gaga.jpg%3Ftoken%3DAPP5FJR2FRHPRQOS5CGJH227BR3CA");
         Artist artist5 = new Artist("T.Wong", 33, "Independent", "Columbus,Ohio", "https://files.slack.com/files-pri/T14LST83D-F01700AFVAN/t-wong-grungecake-thumbnail.png");
 
-        artistRepo.save(artist1);
-        artistRepo.save(artist2);
-        artistRepo.save(artist3);
-        artistRepo.save(artist4);
-        artistRepo.save(artist5);
+        artistStorage.save(artist1);
+        artistStorage.save(artist2);
+        artistStorage.save(artist3);
+        artistStorage.save(artist4);
+        artistStorage.save(artist5);
 
         Album album1 = new Album("The Debut Album", "Atlantic", "https://bertiehorsfield.files.wordpress.com/2011/11/ed-sheeran-album-cover_499x4281.jpg", artist3);
         Album album2 = new Album("The Upside Down", "N/A", "https://www.columbusunderground.com/wp-content/uploads/2018/09/t.wong_.jpg", artist5);
@@ -42,13 +45,13 @@ public class Populator implements CommandLineRunner {
         Album album6 = new Album("Let's Rock", "Easy Eye Records","https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/The_Black_Keys_-_Let%27s_Rock.png/220px-The_Black_Keys_-_Let%27s_Rock.png",artist2);
         Album album7 = new Album("The Fame", "Record Plant","https://raw.githubusercontent.com/2020-Summer-Cohort/artists-albums-and-songs-codingforte/dev/frontend-spa/Images/Ladygaga.jpg?token=APQ4M7EOIFEYCTATE6CXVVC7BSQPO", artist4);
 
-        albumRepo.save(album1);
-        albumRepo.save(album2);
-        albumRepo.save(album3);
-        albumRepo.save(album4);
-        albumRepo.save(album5);
-        albumRepo.save(album6);
-        albumRepo.save(album7);
+        albumStorage.save(album1);
+        albumStorage.save(album2);
+        albumStorage.save(album3);
+        albumStorage.save(album4);
+        albumStorage.save(album5);
+        albumStorage.save(album6);
+        albumStorage.save(album7);
 
         Song song1 = new Song("Come Together","4:19","https://www.youtube.com/watch?v=45cYwDMibGo","https://raw.githubusercontent.com/2020-Summer-Cohort/artists-albums-and-songs-codingforte/dev/frontend-spa/Images/AbbeyRoad.png?token=APQ4M7A3TH44ADAVHT4MV4K7BSORK", album3);
         Song song2 = new Song("The A Team", "4:49", "https://www.youtube.com/watch?v=UAWcs5H-qgQ", "https://bertiehorsfield.files.wordpress.com/2011/11/ed-sheeran-album-cover_499x4281.jpg", album1);
@@ -69,24 +72,24 @@ public class Populator implements CommandLineRunner {
         Song song17 = new Song("I Want You","7:47","https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DtAe2Q_LhY8g","https://raw.githubusercontent.com/2020-Summer-Cohort/artists-albums-and-songs-codingforte/dev/frontend-spa/Images/AbbeyRoad.png?token=APQ4M7A3TH44ADAVHT4MV4K7BSORK", album3);
         Song song18 = new Song("Strawberry Fields Forever","4:24", "https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DTHHZuwv18-0", "https://i.ytimg.com/vi/j_HDCGq4DLg/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBm84u7chjZwh83a5PBcs8y1Wlx4A", album5);
 
-        songRepo.save(song1);
-        songRepo.save(song2);
-        songRepo.save(song3);
-        songRepo.save(song4);
-        songRepo.save(song5);
-        songRepo.save(song6);
-        songRepo.save(song7);
-        songRepo.save(song8);
-        songRepo.save(song9);
-        songRepo.save(song10);
-        songRepo.save(song11);
-        songRepo.save(song12);
-        songRepo.save(song13);
-        songRepo.save(song14);
-        songRepo.save(song15);
-        songRepo.save(song16);
-        songRepo.save(song17);
-        songRepo.save(song18);
+        songStorage.save(song1);
+        songStorage.save(song2);
+        songStorage.save(song3);
+        songStorage.save(song4);
+        songStorage.save(song5);
+        songStorage.save(song6);
+        songStorage.save(song7);
+        songStorage.save(song8);
+        songStorage.save(song9);
+        songStorage.save(song10);
+        songStorage.save(song11);
+        songStorage.save(song12);
+        songStorage.save(song13);
+        songStorage.save(song14);
+        songStorage.save(song15);
+        songStorage.save(song16);
+        songStorage.save(song17);
+        songStorage.save(song18);
     }
 
 

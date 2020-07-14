@@ -1,5 +1,7 @@
 package org.wcci.apimastery.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -11,6 +13,7 @@ public class Album {
     private String albumTitle;
     private String recordLabel;
     private String albumImage;
+    @JsonIgnore
     @ManyToOne
     private Artist artist;
     @OneToMany(mappedBy = "album")

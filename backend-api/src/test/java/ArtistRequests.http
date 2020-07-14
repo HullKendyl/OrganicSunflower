@@ -1,0 +1,4 @@
+GET http://localhost:8080/api/artists
+
+###
+GET http://localhost:8080/api/artist/1/

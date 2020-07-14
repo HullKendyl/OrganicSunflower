@@ -19,12 +19,12 @@ public class ArtistController {
         this.albumStorage = albumStorage;
     }
 
-    @GetMapping("/api/Artists")
+    @GetMapping("/api/artists")
         public Collection<Artist> retrieveAllArtists(){
         return artistStorage.retrieveAllArtists();
     }
 
-    @GetMapping("/api/Artist/{id}/")
+    @GetMapping("/api/artists/{id}/")
     public Artist retrieveArtistById(@PathVariable long id){
         return artistStorage.retrieveArtistById(id);
     }
