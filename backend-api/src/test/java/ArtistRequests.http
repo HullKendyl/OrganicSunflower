@@ -2,3 +2,29 @@ GET http://localhost:8080/api/artists
 
 ###
 GET http://localhost:8080/api/artist/1/
+
+###
+POST http://localhost:8080/api/artists/add/
+Content-Type: application/json
+
+{
+"name": "Test Artist",
+"age": 3,
+"recordLabel": "Test label",
+  "homeTown": "Test home",
+  "artistImage": "tets"
+}
+
+###
+PATCH http://localhost:8080/api/artists/32/addalbum/
+Content-Type: application/json
+
+{
+"albumTitle":  "Test Album",
+"recordLabel": "record",
+  "albumImage": "hhhh"
+
+}
+
+###
+DELETE http://localhost:8080/api/artists/1/

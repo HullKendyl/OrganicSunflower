@@ -34,7 +34,7 @@ public class ArtistController {
         return artistStorage.save(artist);
     }
 
-    @PatchMapping("/api/artists/{artistId}/addAlbum/")
+    @PatchMapping("/api/artists/{artistId}/addalbum/")
     public Artist addAlbumToArtist(@PathVariable long artistId, @RequestBody Album album){
         Artist artist = artistStorage.retrieveArtistById(artistId);
         Album albumToAdd = new Album(album.getAlbumTitle(), album.getRecordLabel(), album.getAlbumImage(), artist);
