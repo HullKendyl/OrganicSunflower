@@ -23,11 +23,16 @@ body
     justify-content: center;
 }
 
+nav{
+    display:flex;
+}
+
 .banner ul
 {
     display: flex;
     flex-direction: row-reverse;
-    margin-right: 100px;    
+    /* margin-right: 100px; */
+    margin-left: 50%;    
     margin-top: 20px;
     z-index:0;
     text-align: right;
@@ -35,14 +40,18 @@ body
     color: rgb(255, 9, 181)
 }
 ​
-.banner li
+ul li{
+    font-size: 60pt;
+}
+.nav-li li
 {
-    display: flex;
-    list-style: none;
-    align-items: right;
-    margin: 15px 40px 10px;
+    /* display: flex; */
+    /* list-style: none; */
+    /* align-items: right; */
+    /* margin: 15px 40px 10px;
     font-size: 32px;
     letter-spacing: 8px;
+    padding: 10px; */
 }
 .bkg
 {
