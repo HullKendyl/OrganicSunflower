@@ -3,7 +3,7 @@ package org.wcci.apimastery.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.mockito.Mockito;
 import org.springframework.ui.Model;
-import org.wcci.apimastery.storage.SongStorage;
+import org.wcci.apimastery.storages.SongStorage;
 
 import static org.mockito.Mockito.mock;
 

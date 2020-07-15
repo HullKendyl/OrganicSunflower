@@ -1,6 +1,0 @@
-GET http://localhost:8080/api/albums
-
-###
-GET http://localhost:8080/api/albums/8/
-
-###

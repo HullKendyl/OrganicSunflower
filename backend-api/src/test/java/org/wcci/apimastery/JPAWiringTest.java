@@ -7,9 +7,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.wcci.apimastery.entities.Album;
 import org.wcci.apimastery.entities.Artist;
 import org.wcci.apimastery.entities.Song;
-import org.wcci.apimastery.storage.repositories.AlbumRepository;
-import org.wcci.apimastery.storage.repositories.ArtistRepository;
-import org.wcci.apimastery.storage.repositories.SongRepository;
+import org.wcci.apimastery.storages.repositories.AlbumRepository;
+import org.wcci.apimastery.storages.repositories.ArtistRepository;
+import org.wcci.apimastery.storages.repositories.SongRepository;
 
 import java.util.Optional;
 

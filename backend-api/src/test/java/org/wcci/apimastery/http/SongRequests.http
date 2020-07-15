@@ -1,0 +1,7 @@
+GET http://localhost:8080/api/songs
+
+###
+GET http://localhost:8080/api/songs/30/
+
+###
+DELETE http://localhost:8080/api/songs/30/

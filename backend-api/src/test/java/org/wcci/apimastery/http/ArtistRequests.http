@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:8080/api/artists/32/addalbum/
+PATCH http://localhost:8080/api/artists/3/addalbum/
 Content-Type: application/json
 
 {

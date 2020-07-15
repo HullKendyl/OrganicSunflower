@@ -1,8 +1,8 @@
-package org.wcci.apimastery.storage;
+package org.wcci.apimastery.storages;
 
 import org.springframework.stereotype.Service;
 import org.wcci.apimastery.entities.Artist;
-import org.wcci.apimastery.storage.repositories.ArtistRepository;
+import org.wcci.apimastery.storages.repositories.ArtistRepository;
 
 import java.util.Collection;
 

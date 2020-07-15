@@ -1,12 +1,11 @@
 package org.wcci.apimastery.controllers;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.wcci.apimastery.entities.Album;
 import org.wcci.apimastery.entities.Song;
-import org.wcci.apimastery.storage.AlbumStorage;
-import org.wcci.apimastery.storage.ArtistStorage;
-import org.wcci.apimastery.storage.SongStorage;
+import org.wcci.apimastery.storages.AlbumStorage;
+import org.wcci.apimastery.storages.ArtistStorage;
+import org.wcci.apimastery.storages.SongStorage;
 
 import java.util.Collection;
 
