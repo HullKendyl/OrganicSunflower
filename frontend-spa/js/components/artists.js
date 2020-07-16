@@ -1,40 +1,20 @@
-export{
-    createAllArtistsView
-}
-
-const createAllArtistsView = ()=>{
+const createAllArtistsView = (artists) => {
+  const artistTitle = document.createElement("div");
+  artistTitle.classList.add("main");
+  artistTitle.innerHTML = `
+  <h3>Artists</h3>
+  `;
+  for (let i = 0; i < artists.length; i++) {
     const allArtistsView = document.createElement("div");
-    header.classList.add('main');
-    header.innerHTML = `
-    <h3>Artists</h3>
-  <ol>
-      <li class="artist-div">
-        <a href="./Artist.html">
-          <img src="./Images/AbbeyRoad.png">
+    allArtistsView.classList.add("artist-div");
+    allArtistsView.innerHTML = `
+              <img src="${artists[i].artistImage}">
           <div class="span-div">
-          <span class="artist-name">The Beatles</span>
+          <span class="artist-name">${artists[i].name}</span>
           </div>
-        </a>
-      </li>
+    `;
+    return artistTitle, allArtistsView;
+  }
+};
 
-      <li class="artist-div">
-        <a href="./Artist.html">
-        <img src="./Images/AbbeyRoad.png">
-        <div class="span-div">
-        <span class="artist-name">Artist Name</span>
-        </div>
-      </a>
-    </li>
-
-    <li class="artist-div">
-      <a href="./Artist.html">
-      <img src="./Images/AbbeyRoad.png">
-      <div class="span-div">
-      <span class="artist-name">Artist Name</span>
-      </div>
-    </a>
-  </li>
-  </ol>
-  `
-  return allArtistsView;
-}
+export { createAllArtistsView };

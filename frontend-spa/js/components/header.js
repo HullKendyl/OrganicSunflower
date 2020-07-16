@@ -1,11 +1,9 @@
-export{
-    createHeader
-}
+export { createHeader };
 
-const createHeader = ()=>{
-    const header = document.createElement("header");
-    header.classList.add('header');
-    header.innerHTML = `
+const createHeader = () => {
+  const header = document.createElement("header");
+  header.classList.add("header");
+  header.innerHTML = `
     <div class="banner">
     <nav>
         <h1 class="logo-text"><span>Organic</span> Sunflower</h1>
@@ -43,10 +41,9 @@ const createHeader = ()=>{
         </ul>  
     </nav>
     <video autoplay muted loop>
-        <source src = "/Images/headervid.mp4" type="video/mp4">
+        <source src = "./Images/headervid.mp4" type="video/mp4">
     </video>
 </div>
-    `
-    return header;
-      
-}
+    `;
+  return header;
+};
