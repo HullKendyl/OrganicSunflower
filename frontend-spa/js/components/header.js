@@ -43,7 +43,7 @@ const createHeader = ()=>{
         </ul>  
     </nav>
     <video autoplay muted loop>
-        <source src = "headervid.mp4" type="video/mp4">
+        <source src = "/Images/headervid.mp4" type="video/mp4">
     </video>
 </div>
     `

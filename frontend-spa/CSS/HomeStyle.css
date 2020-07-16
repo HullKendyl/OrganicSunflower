@@ -116,7 +116,7 @@ display: table;
 {
     
     background-image: 
-    url(../yellow.jpeg);
+    url(../Images/yellow.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,7 +124,7 @@ display: table;
 .grid-img2
 {
     background-image:
-    url(../suzy.jpeg);
+    url(../Images/suzy.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
