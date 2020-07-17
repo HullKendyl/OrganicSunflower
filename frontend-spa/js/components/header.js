@@ -1,4 +1,4 @@
-const createHeader = () => {
+const createHomepageHeader = () => {
   const header = document.createElement("header");
   header.classList.add("header");
   header.innerHTML = `
@@ -8,7 +8,7 @@ const createHeader = () => {
         <ul>    
             <li class="nav-li">
                 <a
-                href="/Albums.html"
+                href="#"
                 style="text-decoration: none;"
                 alink="white"
                 vlink="white"
@@ -16,21 +16,21 @@ const createHeader = () => {
             </li>
             <li class="nav-li">
                 <a
-                href="/Songs.html"
+                href="#"
                 style="text-decoration: none;"
                 alink="white"
                 vlink="white"
                 >SONGS</a>
             </li>
             <li class="nav-li">
-                <a href="/Artists.html"
+                <a href="#"
                 style="text-decoration: none;"
                 alink="white"
                 vlink="white"
                 >ARTISTS</a>
             </li>
             <li class="nav-li">
-                <a href="/index.html"
+                <a href="#"
                 style="text-decoration: none;"
                 alink="white"
                 vlink="white"
@@ -45,5 +45,51 @@ const createHeader = () => {
     `;
   return header;
 }
+const createHeader = () => {
+    const header = document.createElement("header");
+    header.classList.add("header");
+    header.innerHTML = `
+      <div class="banner">
+      <nav>
+          <h1 class="logo-text"><span>Organic</span> Sunflower</h1>
+          <ul>    
+              <li class="nav-li">
+                  <a
+                  href="#"
+                  style="text-decoration: none;"
+                  alink="white"
+                  vlink="white"
+                  >ALBUMS</a>
+              </li>
+              <li class="nav-li">
+                  <a
+                  href="#"
+                  style="text-decoration: none;"
+                  alink="white"
+                  vlink="white"
+                  >SONGS</a>
+              </li>
+              <li class="nav-li">
+                  <a href="#"
+                  style="text-decoration: none;"
+                  alink="white"
+                  vlink="white"
+                  >ARTISTS</a>
+              </li>
+              <li class="nav-li">
+                  <a href="#"
+                  style="text-decoration: none;"
+                  alink="white"
+                  vlink="white"
+                  >HOME</a>
+              </li>
+          </ul>  
+      </nav>
+  </div>
+      `;
+    return header;
+  }
+  
+export { createHomepageHeader, 
+createHeader };
 
-export { createHeader };

@@ -1,4 +1,4 @@
-import { createHeader } from "./components/header.js";
+import { createHomepageHeader } from "./components/header.js";
 import { createFooter } from "./components/footer.js";
 import { createAllArtistsView } from "./components/artists.js";
 import { fetchArtists } from "./apiHelper.js";
@@ -10,7 +10,7 @@ const renderPage = (element, artists) => {
 
   clearElementChildren(element)
 
-  container.prepend(createHeader());
+  container.prepend(createHomepageHeader());
   container.appendChild(createAllArtistsView(element, artists));
   container.appendChild(createFooter());
 };

@@ -12,9 +12,11 @@ const renderSingleArtist = (element, artist) => {
     clearElementChildren(element);
     element.prepend(createHeader());
 
+    
+
     const artistView = document.createElement('div')
     artistView.innerHTML = `
-    <div class="artist-profile">
+    <div style="background-image: url(${artist.artistImage})" class="artist-profile">
         <div class="artist">
             <h6>ARTIST</h6>
             <h1>${artist.name}</h1>
