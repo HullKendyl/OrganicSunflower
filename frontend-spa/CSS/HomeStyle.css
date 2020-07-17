@@ -67,6 +67,11 @@ ul li{
     font-family: 'Darker Grotesque', sans-serif;
     text-transform: uppercase;
 }
+
+img{
+    width: 200px;
+    height: 200px;
+}
 .section
 {
     max-width: 960px;

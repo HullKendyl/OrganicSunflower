@@ -1,6 +1,3 @@
-export{
-    createFooter
-}
 const createFooter = ()=>{
     const footer = document.createElement("footer");
     footer.classList.add('footer');
@@ -38,4 +35,8 @@ const createFooter = ()=>{
 </footer>    
     `
     return footer;
+}
+
+export{
+  createFooter
 }

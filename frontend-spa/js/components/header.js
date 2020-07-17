@@ -1,5 +1,3 @@
-export { createHeader };
-
 const createHeader = () => {
   const header = document.createElement("header");
   header.classList.add("header");
@@ -46,4 +44,6 @@ const createHeader = () => {
 </div>
     `;
   return header;
-};
+}
+
+export { createHeader };
