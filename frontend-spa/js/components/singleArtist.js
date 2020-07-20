@@ -7,12 +7,13 @@ import {
 import {
   createFooter
 } from "./footer.js"
+import{
+    renderSingleAlbum
+}from "./singleAlbum.js"
 
 const renderSingleArtist = (element, artist) => {
     clearElementChildren(element);
     element.prepend(createHeader());
-
-    
 
     const artistView = document.createElement('div')
     artistView.innerHTML = `
@@ -52,13 +53,16 @@ const renderSingleArtist = (element, artist) => {
         </div>
         `;
 
+        li.addEventListener('click', ()=>{
+            renderSingleAlbum(element, album);
+        });
+
         albumList.append(li);
     })
 
     artistAlbums.append(albumList);
     element.append(artistAlbums);
     element.appendChild(createFooter());
-
 }
 
 export {
