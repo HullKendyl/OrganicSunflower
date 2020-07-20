@@ -20,6 +20,9 @@ public class Artist {
     @OneToMany(mappedBy = "artist", orphanRemoval = true)
     private Collection<Album> albums;
 
+    @OneToMany(mappedBy = "artist",orphanRemoval = true)
+    private Collection<Song> songs;
+
     protected Artist() {
     }
 
@@ -57,6 +60,10 @@ public class Artist {
 
     public Collection<Album> getAlbums() {
         return albums;
+    }
+
+    public Collection<Song> getSongs() {
+        return songs;
     }
 
     @Override

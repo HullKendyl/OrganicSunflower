@@ -7,6 +7,9 @@ import {
 import {
   createFooter
 } from "./footer.js"
+import {
+    renderSingleSong
+} from "./singleSong.js"
 
 const renderSingleAlbum = (element, album) => {
     clearElementChildren(element);
@@ -38,10 +41,15 @@ const renderSingleAlbum = (element, album) => {
     
     const songList= document.createElement('ol');
     album.songs.forEach((song) =>{
+        console.log(song);
         const li = document.createElement('li');
         li.innerHTML=`
         ${song.songTitle}
         `;
+        li.addEventListener("click", ()=>{
+            renderSingleSong(element, song);
+        });
+        songList.append(li);
     })
 
     albumSection.append(songList);
