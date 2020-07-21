@@ -4,4 +4,18 @@ const fetchArtists = async () => {
   );
 };
 
-export { fetchArtists };
+const postNewArtist = async (artist) => {
+  console.log(artist);
+  return fetch('http://localhost:8080/api/artists/add/', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(artist)
+  }).then(response => response.json());
+};
+
+export { 
+  fetchArtists,
+  postNewArtist
+ };

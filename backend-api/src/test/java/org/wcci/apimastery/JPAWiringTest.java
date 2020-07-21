@@ -57,9 +57,9 @@ public class JPAWiringTest {
         Album testAlbum = new Album("Album Title", "Record Label", "Album Image", testArtist);
         albumRepo.save(testAlbum);
 
-        Song testSong1 = new Song("title", "Song Duration", "song link", "song image", testAlbum);
+        Song testSong1 = new Song("title", "Song Duration", "song link", "song image", testAlbum, testArtist);
         songRepo.save(testSong1);
-        Song testSong2 = new Song("title", "Song Duration", "song link", "song image", testAlbum);
+        Song testSong2 = new Song("title", "Song Duration", "song link", "song image", testAlbum, testArtist);
         songRepo.save(testSong2);
 
         entityManager.flush();

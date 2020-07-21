@@ -1,13 +1,14 @@
-// import {
-//   createHeader 
-// } from "./header.js"
-// import {
-//   createFooter
-// } from "./footer.js"
+import {
+  postNewArtist
+} from "../apiHelper.js"
 
 import {
   renderSingleArtist
 } from "./singleArtist.js"
+
+import {
+  renderPage
+} from "../app.js"
 
 const createAllArtistsView = (element, artists) => {
   const artistSection = document.createElement("section");
@@ -33,9 +34,62 @@ const createAllArtistsView = (element, artists) => {
 
     artistSection.append(allArtistsView)
   }
-  
-  
+
+  drawFormAddArtist(element, artistSection);
+
   return artistSection;
 };
+
+function drawFormAddArtist(element, artistSection) {
+  const nameInput = document.createElement('input');
+  nameInput.type = 'text';
+  nameInput.placeholder = 'Artist Name';
+  nameInput.classList.add('artist__form-name');
+  artistSection.append(nameInput);
+  
+  const ageInput = document.createElement('input');
+  ageInput.type = 'text';
+  ageInput.placeholder = 'Artist Age';
+  ageInput.classList.add('artist__form-age');
+  artistSection.append(ageInput);
+  
+  const recordLabelInput = document.createElement('input');
+  recordLabelInput.type = 'text';
+  recordLabelInput.placeholder = 'Record Label';
+  recordLabelInput.classList.add('artist__form-recordLabel');
+  artistSection.append(recordLabelInput);
+  
+  const homeTownInput = document.createElement('input');
+  homeTownInput.type = 'text';
+  homeTownInput.placeholder = 'Hometown';
+  homeTownInput.classList.add('artist__form-homeTown');
+  artistSection.append(homeTownInput);
+  
+  const artistImageInput = document.createElement('input');
+  artistImageInput.type = 'text';
+  artistImageInput.placeholder = 'Artist Image URL';
+  artistImageInput.classList.add('artist__form-artistImage');
+  artistSection.append(artistImageInput);
+
+  const submitButton = document.createElement('button');
+  submitButton.innerText = "Submit";
+  submitButton.classList.add('artist__form-submit');
+  artistSection.append(submitButton);
+
+  submitButton.addEventListener('click', () => {
+    const artist = {
+      "name": nameInput.value,
+      "age": ageInput.value,
+      "recordLabel": recordLabelInput.value,
+      "homeTown": homeTownInput.value,
+      "artistImage": artistImageInput.value,
+    };
+    postNewArtist(artist).then((artists) => {
+      renderPage(element, artists);
+    });
+      
+  })
+
+}
 
 export { createAllArtistsView };

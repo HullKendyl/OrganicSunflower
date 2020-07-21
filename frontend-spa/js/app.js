@@ -18,3 +18,7 @@ const renderPage = (element, artists) => {
 fetchArtists().then((artists) => {
   renderPage(container, artists);
 });
+
+export {
+  renderPage
+}
