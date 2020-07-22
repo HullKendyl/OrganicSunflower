@@ -53,6 +53,8 @@ public class Album {
         return songs;
     }
 
+    public String getArtistName() {return artist.getName();}
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

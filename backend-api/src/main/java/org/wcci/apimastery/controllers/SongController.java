@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.wcci.apimastery.entities.Album;
 import org.wcci.apimastery.entities.Song;
 import org.wcci.apimastery.storages.SongStorage;
 
@@ -25,6 +26,11 @@ public class SongController {
     @GetMapping("/api/songs/{id}/")
     public Song retrieveSongById(@PathVariable long id){
         return songStorage.findSongById(id);
+    }
+
+    @GetMapping("/api/songs/{id}/album")
+    public Album fetchSongAlbum(@PathVariable long id){
+        return songStorage.findSongById(id).getAlbum();
     }
 
     @DeleteMapping("/api/songs/{id}/")

@@ -40,7 +40,7 @@ public class AlbumController {
     @PatchMapping("/api/albums/{albumId}/addsong/")
     public Album addSongToAlbum(@PathVariable long albumId, @RequestBody Song song){
         Album albumToUpdate = albumStorage.findAlbumById(albumId);
-        Song songToAdd = new Song(song.getSongTitle(), song.getSongDuration(), song.getSongLink(), song.getSongImage(), albumToUpdate);
+        Song songToAdd = new Song(song.getSongTitle(), song.getSongDuration(), song.getSongLink(), song.getSongImage(), albumToUpdate, albumToUpdate.getArtist());
         songStorage.save(songToAdd);
         return songToAdd.getAlbum();
     }
