@@ -1,11 +1,11 @@
-/* .artist-profile
+.artist-profile
 {
-    background-image: url("/Images/TheBeetles.png");
+    /* background-image: url("/Images/TheBeetles.png"); */
     background-size: cover;
     height: 300px;
     width: 100%;
     position: relative;
-} */
+}
 
 .artist {
   display: flex;

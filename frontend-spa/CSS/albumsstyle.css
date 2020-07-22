@@ -5,7 +5,7 @@
 
 .body, html
 {
-    background-color: rgb(84, 0, 122);
+    background-color: black;
     scroll-behavior: smooth;
 }
 .featured-header
@@ -56,6 +56,7 @@ ul li
     margin: 0 auto;
     padding: 6% 2%;
 }
+
 .right-grid
 {
     margin-left: 300px;
@@ -74,6 +75,7 @@ ul li
 content: "";
 display: table;
 }
+
 .right-grid li
 {
     width:328px;
@@ -95,43 +97,6 @@ display: table;
 {
     transform: scale(1.05);
 }
-.grid-img1
-{
-    
-    background-image: 
-    url(../yellow.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.grid-img2
-{
-    background-image:
-    url(../suzy.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.grid-img3
-{
-    background-image:
-    url(../luis.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.grid-img4
-{
-    background-image:
-    url(../plane.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-}
-
 
 .footer
 {

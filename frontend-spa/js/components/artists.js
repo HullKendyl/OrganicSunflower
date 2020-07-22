@@ -9,7 +9,7 @@ const createAllArtistsView = (element, artists) => {
   const artistTitle = document.createElement("div");
   artistTitle.classList.add("main");
   artistTitle.innerHTML = `
-  <h3>Artists</h3>
+  <div class="artist-home">Artists</div>
   `;
   artistSection.append(artistTitle);
   for (let i = 0; i < artists.length; i++) {
