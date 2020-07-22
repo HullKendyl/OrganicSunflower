@@ -10,6 +10,9 @@ import {
 import {
     renderSingleSong
 } from "./singleSong.js"
+import {
+    postNewSong
+}from "../apiHelper.js"
 
 const renderSingleAlbum = (element, album) => {
     clearElementChildren(element);
@@ -54,7 +57,46 @@ const renderSingleAlbum = (element, album) => {
 
     albumSection.append(songList);
     element.append(albumSection);
+    drawFormAddSong(element, album);
     element.append(createFooter());
+}
+
+function drawFormAddSong(element, album){
+    const nameInput= document.createElement("input");
+    nameInput.type= "text";
+    nameInput.placeholder= "Song Name";
+    nameInput.classList.add("song__form-songTitle");
+    element.append(nameInput);
+
+    const songDuration= document.createElement("input");
+    songDuration.type= "text";
+    songDuration.placeholder= "Song Duration";
+    songDuration.classList.add("song__form-songDuration");
+    element.append(songDuration);
+
+    const songLink= document.createElement("input");
+    songLink.type= "text";
+    songLink.placeholder= "Song Link";
+    songLink.classList.add("song__form-songLink");
+    element.append(songLink);
+
+    const submitButton = document.createElement('button');
+    submitButton.innerText = "Submit";
+    submitButton.classList.add('song__form-submit');
+    element.append(submitButton);
+  
+    submitButton.addEventListener("click", () => {
+        const song = {
+            "songTitle": nameInput.value,
+            "songDuration": songDuration.value,
+            "songLink": songLink.value,
+            "songImage": `${album.albumImage}`,
+        };
+        console.log(song)
+        postNewSong(song, album).then((album) => {
+            renderSingleAlbum(element, album);
+        });
+    });
 }
 
 export{
