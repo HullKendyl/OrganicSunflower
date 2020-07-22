@@ -98,8 +98,12 @@ function drawFormAddAlbum(element, artist){
             "recordLabel": recordLabel.value,
             "albumImage": albumImage.value,
         };
-        postNewAlbum(album, artist)
-    })
+        console.log (album)
+
+        postNewAlbum(album, artist).then((artist) => {
+            renderSingleArtist(element, artist);
+        });
+    });
 }
 
 export {

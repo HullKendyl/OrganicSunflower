@@ -17,13 +17,13 @@ const postNewArtist = async (artist) => {
 
 const postNewAlbum = async(album, artist) =>{
   return fetch(`http://localhost:8080/api/artists/${artist.id}/addalbum/`, {
-    method: "POST",
+    method: "PATCH",
     headers: {
-      "Content-Type": "application"
-    }
-  }
-  )
-}
+      "Content-Type": "application/json"
+    }, 
+    body: JSON.stringify(album)
+  }).then(response => response.json());
+};
 
 export { 
   fetchArtists,
