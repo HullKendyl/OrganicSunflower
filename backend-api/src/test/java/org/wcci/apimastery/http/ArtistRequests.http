@@ -12,7 +12,8 @@ Content-Type: application/json
 "age": 3,
 "recordLabel": "Test label",
   "homeTown": "Test home",
-  "artistImage": "tets"
+  "artistImage": "tets",
+  "albums": []
 }
 
 ###
