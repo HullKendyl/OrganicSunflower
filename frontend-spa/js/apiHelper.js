@@ -15,7 +15,18 @@ const postNewArtist = async (artist) => {
   }).then(response => response.json());
 };
 
+const postNewAlbum = async(album, artist) =>{
+  return fetch(`http://localhost:8080/api/artists/${artist.id}/addalbum/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application"
+    }
+  }
+  )
+}
+
 export { 
   fetchArtists,
-  postNewArtist
+  postNewArtist,
+  postNewAlbum
  };

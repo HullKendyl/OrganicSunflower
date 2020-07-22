@@ -85,6 +85,7 @@ function drawFormAddArtist(element, artistSection) {
       "artistImage": artistImageInput.value,
     };
     postNewArtist(artist).then((artists) => {
+      console.log (artists)
       renderPage(element, artists);
     });
       

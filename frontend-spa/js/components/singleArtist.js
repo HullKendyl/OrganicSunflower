@@ -10,6 +10,9 @@ import {
 import{
     renderSingleAlbum
 }from "./singleAlbum.js"
+import{
+    postNewAlbum
+} from "../apiHelper.js"
 
 const renderSingleArtist = (element, artist) => {
     clearElementChildren(element);
@@ -62,7 +65,41 @@ const renderSingleArtist = (element, artist) => {
 
     artistAlbums.append(albumList);
     element.append(artistAlbums);
+    drawFormAddAlbum(element, artist);
     element.appendChild(createFooter());
+}
+function drawFormAddAlbum(element, artist){
+    const nameInput= document.createElement("input");
+    nameInput.type= "text";
+    nameInput.placeholder= "Album Name";
+    nameInput.classList.add("album__form-albumTitle");
+    element.append(nameInput);
+
+    const recordLabel= document.createElement("input");
+    recordLabel.type= "text";
+    recordLabel.placeholder= "Record Label";
+    recordLabel.classList.add("album__form-recordLabel");
+    element.append(recordLabel);
+
+    const albumImage= document.createElement("input");
+    albumImage.type= "text";
+    albumImage.placeholder= "Album Image URL";
+    albumImage.classList.add("album__form-albumImage");
+    element.append(albumImage);
+    
+    const submitButton = document.createElement('button');
+    submitButton.innerText = "Submit";
+    submitButton.classList.add('album__form-submit');
+    element.append(submitButton);
+  
+    submitButton.addEventListener("click", () => {
+        const album = {
+            "albumTitle": nameInput.value,
+            "recordLabel": recordLabel.value,
+            "albumImage": albumImage.value,
+        };
+        postNewAlbum(album, artist)
+    })
 }
 
 export {

@@ -1,11 +1,15 @@
 package org.wcci.apimastery.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.wcci.apimastery.entities.Album;
 import org.wcci.apimastery.entities.Artist;
 import org.wcci.apimastery.storages.AlbumStorage;
 import org.wcci.apimastery.storages.ArtistStorage;
 
+import javax.persistence.EntityManager;
+import javax.tools.ForwardingJavaFileManager;
+import javax.tools.JavaFileManager;
 import java.util.Collection;
 
 @RestController
