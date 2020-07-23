@@ -34,7 +34,6 @@ const createAllArtistsView = (element, artists) => {
 
   artistSection.append(allArtists);
   drawFormAddArtist(element, artistSection);
-
   return artistSection;
 };
 
