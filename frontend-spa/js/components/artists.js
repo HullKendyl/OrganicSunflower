@@ -13,7 +13,7 @@ const createAllArtistsView = (element, artists) => {
   `;
   const allArtists = document.createElement("div");
   allArtists.classList.add("all-artists");
-  
+
   artistSection.append(artistTitle);
   for (let i = 0; i < artists.length; i++) {
     const allArtistsView = document.createElement("div");

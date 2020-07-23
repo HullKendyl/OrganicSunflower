@@ -1,147 +1,146 @@
-nav .nav-2{
-    display:flex;
-    width: 100%;
-    height: 200px;
+nav .nav-2 {
+  display: flex;
+  width: 100%;
+  height: 200px;
 }
 
 .banner2 .logo-text2 {
-    display: block;
-    margin-block-start: 30px;
-    margin-left: 25px;
-    margin-top: 10px;
-    color: white;
-    letter-spacing: 8px;
-    font-family: 'Darker Grotesque', sans-serif;
-    text-transform: uppercase;
+  display: block;
+  margin-block-start: 30px;
+  margin-left: 25px;
+  margin-top: 10px;
+  color: white;
+  letter-spacing: 8px;
+  font-family: "Darker Grotesque", sans-serif;
+  text-transform: uppercase;
 }
- 
+
 .banner2 ul {
-    display: flex; 
-    margin-left: 75%;    
-    margin-top: 25px;
-    text-align: right;
-    font-family: 'Open Sans', sans-serif; 
+  display: flex;
+  margin-left: 75%;
+  margin-top: 25px;
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
 }
 
 .banner2 ul li {
-    font-size: 30pt;
-    margin-right: 30px;
-    color: rgb(255, 9, 181);
+  font-size: 30pt;
+  margin-right: 30px;
+  color: rgb(255, 9, 181);
 }
 
 .artist-h6 {
-    display: flex;
-    justify-content: center;
-    font-size: 120pt;
-    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  font-size: 120pt;
+  margin-top: 50px;
 }
 
 .artist-h1 {
-    font-size: 50pt;
-    margin: 115px 0px 30px 25px;
-    text-transform: uppercase;
+  font-size: 50pt;
+  margin: 115px 0px 30px 25px;
+  text-transform: uppercase;
 }
 
 .artist-h3 {
-    font-size: 35pt;
-    margin-left: 50px;
+  font-size: 35pt;
+  margin-left: 50px;
 }
 
 .artist-li {
-    font-size: 25pt;
-    margin-left: 75px;
+  font-size: 25pt;
+  margin-left: 75px;
 }
 
 .artist-albumTitle-h3 {
-    font-size: 35pt;
-    margin-left: 50px;
+  font-size: 35pt;
+  margin-left: 50px;
 }
 
 .all-albums {
-    display: flex;
-    flex-wrap: wrap;
-    height: 650px;
-    margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 650px;
+  margin-bottom: 100px;
 }
 
 .album-div {
-    padding: 20px;
+  padding: 20px;
 }
 
 .album-image {
-    width: 300px;
-    height: 300px; 
-    cursor: pointer;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .create-album {
-    margin: 100px 0px 10px 25px;
-    font-size: 50pt;
-    text-transform: uppercase;
+  margin: 100px 0px 10px 25px;
+  font-size: 50pt;
+  text-transform: uppercase;
 }
 
 .add-album-form {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 .album__form-albumTitle,
 .album__form-recordLabel,
-.album__form-albumImage
-{
-    margin-right: 5px;
+.album__form-albumImage {
+  margin-right: 5px;
 }
 
 .album__form-submit {
-    background-color: rgb(255, 9, 181);
-    color: black;
-    text-transform: uppercase;
-    font-size: 11pt;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  background-color: rgb(255, 9, 181);
+  color: black;
+  text-transform: uppercase;
+  font-size: 11pt;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .artist__form-delete {
-    width: auto;
-    height: auto;
-    text-align: center;
-    margin: 50px 0px 0px 25px;
-    text-transform: uppercase;
-    font-size: 15pt;
-    background-color: rgb(255, 9, 181);
-    color: black;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 50px 0px 0px 25px;
+  text-transform: uppercase;
+  font-size: 15pt;
+  background-color: rgb(255, 9, 181);
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 footer .footer-content {
-    display:flex;
-    width: 100%;
-    height: 200px;
-    margin-top: 20px;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
 }
 
 footer .logo-text {
-    display: block;
-    margin-block-start: 30px;
-    margin-left: 25px;
-    margin-top: 10px;
-    color: white;
-    letter-spacing: 8px;
-    font-family: 'Darker Grotesque', sans-serif;
-    text-transform: uppercase;
+  display: block;
+  margin-block-start: 30px;
+  margin-left: 25px;
+  margin-top: 10px;
+  color: white;
+  letter-spacing: 8px;
+  font-family: "Darker Grotesque", sans-serif;
+  text-transform: uppercase;
 }
 
 footer .footerlist {
-    display: flex; 
-    margin-left: 70%;    
-    margin-top: 25px;
-    text-align: right;
-    font-family: 'Open Sans', sans-serif; 
+  display: flex;
+  margin-left: 70%;
+  margin-top: 25px;
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
 }
 
 footer ul li {
-    font-size: 30pt;
-    margin-right: 30px;
+  font-size: 30pt;
+  margin-right: 30px;
 }
