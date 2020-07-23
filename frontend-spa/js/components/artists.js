@@ -94,7 +94,6 @@ function drawFormAddArtist(element, artistSection) {
       songs: [],
     };
     postNewArtist(artist).then((artists) => {
-      console.log(artists);
       renderPage(element, artists);
     });
   });

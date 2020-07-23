@@ -5,7 +5,6 @@ const fetchArtists = async () => {
 };
 
 const postNewArtist = async (artist) => {
-  console.log(artist);
   return fetch("http://localhost:8080/api/artists/add/", {
     method: "POST",
     headers: {
@@ -44,4 +43,30 @@ const removeArtist = async (artist) => {
   }).then((response) => response.json());
 };
 
-export { fetchArtists, postNewArtist, postNewAlbum, postNewSong, removeArtist };
+const deleteAlbum = async (album) => {
+  return fetch(`http://localhost:8080/api/albums/${album.id}/`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((response) => response.json());
+};
+
+const deleteSong = async (song) => {
+  return fetch(`http://localhost:8080/api/songs/${song.id}/`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((response) => response.json());
+};
+
+export {
+  fetchArtists,
+  postNewArtist,
+  postNewAlbum,
+  postNewSong,
+  removeArtist,
+  deleteAlbum,
+  deleteSong,
+};

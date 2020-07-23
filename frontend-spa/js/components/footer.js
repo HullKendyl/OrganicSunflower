@@ -1,14 +1,14 @@
-const createFooter = ()=>{
-    const footer = document.createElement("footer");
-    footer.classList.add('footer');
-    footer.innerHTML = `
+const createFooter = () => {
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
+  footer.innerHTML = `
 <footer class="footer">
     <div class="footer-content">
        <h1 class="logo-text"><span>Organic</span> Sunflower</h1>
         <ul class ="footerlist">
-            <li>
+            <li class = "footer-button">
                 <a
-                  href="#artists"
+                  
                   style="text-decoration: none;"
                   alink="white"
                   vlink="white"
@@ -33,10 +33,8 @@ const createFooter = ()=>{
         </ul>                       
       </div>
 </footer>    
-    `
-    return footer;
-}
+    `;
+  return footer;
+};
 
-export{
-  createFooter
-}
+export { createFooter };
