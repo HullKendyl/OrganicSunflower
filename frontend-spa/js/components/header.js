@@ -48,7 +48,7 @@ const createHeader = () => {
       <nav>
           <h1 class="logo-text"><span>Organic</span> Sunflower</h1>
           <ul>    
-              <li class="nav-li">
+              <li class="nav-li2">
                   <a
                   href="#"
                   style="text-decoration: none;"
@@ -56,7 +56,7 @@ const createHeader = () => {
                   vlink="white"
                   >ALBUMS</a>
               </li>
-              <li class="nav-li">
+              <li class="nav-li2">
                   <a
                   href="#"
                   style="text-decoration: none;"

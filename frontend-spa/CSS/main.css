@@ -63,17 +63,89 @@ nav {
 }
 
 .artist-home {
-    font-size: 30pt;
-    margin: -10px 0px 30px 25px;
+    font-size: 50pt;
+    margin: 115px 0px 30px 25px;
+    text-transform: uppercase;
+}
+
+.all-artists {
+    display: flex;
+    flex-wrap: wrap;
+    height: 650px;
 }
 
 .artist-div {
-    display: flex;
-    
-}
+    padding: 20px;
+} 
 
 .artists-image {
-    
-    width: 200px;
+    width: 300px;
+    height: 300px;
+}
+
+.artist-name {
+
+}
+
+.create-artist {
+    margin: 100px 0px 10px 25px;
+    font-size: 50pt;
+    text-transform: uppercase;
+}
+
+.add-artist-form {
+    margin-left: 25px;
+}
+
+.artist__form-name,
+.artist__form-age,
+.artist__form-recordLabel,
+.artist__form-homeTown,
+.artist__form-artistImage
+{
+    margin-right: 5px;
+}
+
+.artist__form-submit {
+    background-color: rgb(255, 9, 181);
+    color: black;
+    text-transform: uppercase;
+    font-size: 11pt;
+    border: none;
+    outline: none;
+}
+
+footer {
+    margin-top: 300px;
+}
+
+footer .footer-content {
+    display:flex;
+    width: 100%;
     height: 200px;
+    margin-top: 20px;
+}
+
+footer .logo-text {
+    display: block;
+    margin-block-start: 30px;
+    margin-left: 25px;
+    margin-top: 10px;
+    color: white;
+    letter-spacing: 8px;
+    font-family: 'Darker Grotesque', sans-serif;
+    text-transform: uppercase;
+}
+
+footer ul {
+    display: flex; 
+    margin-left: 50%;    
+    margin-top: 25px;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+footer ul li {
+    font-size: 30pt;
+    margin-right: 30px;
 }

@@ -11,19 +11,19 @@ const renderSingleArtist = (element, artist) => {
 
   const artistView = document.createElement("div");
   artistView.innerHTML = `
-    <div style="background-image: url(${artist.artistImage})" class="artist-profile">
+  
         <div class="artist">
-            <h6>ARTIST</h6>
-            <h1>${artist.name}</h1>
+            <h6 class="artist-h6">ARTIST</h6>
+            <h1 class="artist-h1">${artist.name}</h1>
         </div>
     </div>
 
     <div class="artist-info">
-        <h3>Bio</h3>
+        <h3 class="artist-h3">Bio</h3>
         <ul>
-            <li>Age of Band - ${artist.age}</li>
-            <li>Record Label - ${artist.recordLabel}</li>
-            <li>Hometown - ${artist.homeTown}</li>
+            <li class="artist-li">Age of Band - ${artist.age}</li>
+            <li class="artist-li">Record Label - ${artist.recordLabel}</li>
+            <li class="artist-li">Hometown - ${artist.homeTown}</li>
         </ul>
     </div>
     `;
@@ -31,6 +31,7 @@ const renderSingleArtist = (element, artist) => {
   const artistAlbums = document.createElement("div");
   artistAlbums.classList.add("artist-albums");
   const albumTitle = document.createElement("h3");
+  albumTitle.classList.add("artist-albumTitle-h3");
   albumTitle.innerHTML = `Albums`;
 
   artistAlbums.append(albumTitle);
@@ -41,9 +42,9 @@ const renderSingleArtist = (element, artist) => {
     const li = document.createElement("li");
     li.classList.add("album-div");
     li.innerHTML = `
-        <img src="${album.albumImage}">
+        <img class ="album-image" src="${album.albumImage}">
         <div class="span-div">
-        <span class="album-title">${album.albumTitle}</span>
+        <span class="album-title-div">${album.albumTitle}</span>
         </div>
         `;
 
@@ -72,6 +73,7 @@ const renderSingleArtist = (element, artist) => {
     });
   });
 };
+
 function drawFormAddAlbum(element, artist) {
   const nameInput = document.createElement("input");
   nameInput.type = "text";

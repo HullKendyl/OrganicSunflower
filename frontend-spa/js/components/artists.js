@@ -12,7 +12,8 @@ const createAllArtistsView = (element, artists) => {
   <div class="artist-home">Artists</div>
   `;
   const allArtists = document.createElement("div");
-  artists;
+  allArtists.classList.add("all-artists");
+  
   artistSection.append(artistTitle);
   for (let i = 0; i < artists.length; i++) {
     const allArtistsView = document.createElement("div");
@@ -28,48 +29,59 @@ const createAllArtistsView = (element, artists) => {
       renderSingleArtist(element, artists[i]);
     });
 
-    artistSection.append(allArtistsView);
+    allArtists.append(allArtistsView);
   }
 
+  artistSection.append(allArtists);
   drawFormAddArtist(element, artistSection);
   return artistSection;
 };
 
 function drawFormAddArtist(element, artistSection) {
+  const createNewArtist = document.createElement("div");
+  createNewArtist.innerHTML = "Create New Artist";
+  createNewArtist.classList.add("create-artist");
+  artistSection.append(createNewArtist);
+
+  const formDiv = document.createElement("div");
+  formDiv.classList.add("add-artist-form");
+
   const nameInput = document.createElement("input");
   nameInput.type = "text";
   nameInput.placeholder = "Artist Name";
   nameInput.classList.add("artist__form-name");
-  artistSection.append(nameInput);
+  formDiv.append(nameInput);
 
   const ageInput = document.createElement("input");
   ageInput.type = "text";
   ageInput.placeholder = "Artist Age";
   ageInput.classList.add("artist__form-age");
-  artistSection.append(ageInput);
+  formDiv.append(ageInput);
 
   const recordLabelInput = document.createElement("input");
   recordLabelInput.type = "text";
   recordLabelInput.placeholder = "Record Label";
   recordLabelInput.classList.add("artist__form-recordLabel");
-  artistSection.append(recordLabelInput);
+  formDiv.append(recordLabelInput);
 
   const homeTownInput = document.createElement("input");
   homeTownInput.type = "text";
   homeTownInput.placeholder = "Hometown";
   homeTownInput.classList.add("artist__form-homeTown");
-  artistSection.append(homeTownInput);
+  formDiv.append(homeTownInput);
 
   const artistImageInput = document.createElement("input");
   artistImageInput.type = "text";
   artistImageInput.placeholder = "Artist Image URL";
   artistImageInput.classList.add("artist__form-artistImage");
-  artistSection.append(artistImageInput);
+  formDiv.append(artistImageInput);
 
   const submitButton = document.createElement("button");
   submitButton.innerText = "Submit";
   submitButton.classList.add("artist__form-submit");
-  artistSection.append(submitButton);
+  formDiv.append(submitButton);
+
+  artistSection.append(formDiv);
 
   submitButton.addEventListener("click", () => {
     const artist = {
