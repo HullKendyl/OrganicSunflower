@@ -21,7 +21,7 @@ const renderSingleAlbum = (element, album) => {
     albumView.classList.add('artist-profile');
     albumView.innerHTML=`
         <div class="artist">
-        <h6>ALBUM</h6>
+        <h6 class="album-h6">ALBUM</h6>
         <h1>${album.albumTitle}</h1>
         </div>
     `;

@@ -81,10 +81,7 @@ nav {
 .artists-image {
     width: 300px;
     height: 300px;
-}
-
-.artist-name {
-
+    cursor: pointer;
 }
 
 .create-artist {
@@ -113,6 +110,7 @@ nav {
     font-size: 11pt;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 footer {

@@ -38,6 +38,7 @@ const renderSingleArtist = (element, artist) => {
   element.append(artistView);
 
   const albumList = document.createElement("ol");
+  albumList.classList.add("all-albums");
   artist.albums.forEach((album) => {
     const li = document.createElement("li");
     li.classList.add("album-div");
@@ -63,28 +64,38 @@ const renderSingleArtist = (element, artist) => {
 };
 
 function drawFormAddAlbum(element, artist) {
+  const createNewAlbum = document.createElement("div");
+  createNewAlbum.innerHTML = "Create New Album";
+  createNewAlbum.classList.add("create-album");
+  element.append(createNewAlbum);
+
+  const formDiv = document.createElement("div");
+  formDiv.classList.add("add-album-form");
+
   const nameInput = document.createElement("input");
   nameInput.type = "text";
   nameInput.placeholder = "Album Name";
   nameInput.classList.add("album__form-albumTitle");
-  element.append(nameInput);
+  formDiv.append(nameInput);
 
   const recordLabel = document.createElement("input");
   recordLabel.type = "text";
   recordLabel.placeholder = "Record Label";
   recordLabel.classList.add("album__form-recordLabel");
-  element.append(recordLabel);
+  formDiv.append(recordLabel);
 
   const albumImage = document.createElement("input");
   albumImage.type = "text";
   albumImage.placeholder = "Album Image URL";
   albumImage.classList.add("album__form-albumImage");
-  element.append(albumImage);
+  formDiv.append(albumImage);
 
   const submitButton = document.createElement("button");
   submitButton.innerText = "Submit";
   submitButton.classList.add("album__form-submit");
-  element.append(submitButton);
+  formDiv.append(submitButton);
+
+  element.append(formDiv);
 
   submitButton.addEventListener("click", () => {
     const album = {
