@@ -11,12 +11,14 @@ const createAllArtistsView = (element, artists) => {
   artistTitle.innerHTML = `
   <div class="artist-home">Artists</div>
   `;
+  const allArtists = document.createElement("div");
+  artists
   artistSection.append(artistTitle);
   for (let i = 0; i < artists.length; i++) {
     const allArtistsView = document.createElement("div");
     allArtistsView.classList.add("artist-div");
     allArtistsView.innerHTML += `
-          <img src="${artists[i].artistImage}">
+          <img class ="artists-image" src="${artists[i].artistImage}">
           <div class="span-div">
           <span class="artist-name">${artists[i].name}</span>
           </div>
