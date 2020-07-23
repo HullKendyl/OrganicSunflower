@@ -2,7 +2,8 @@ import { clearElementChildren } from "../domHelper.js";
 import { createHeader } from "./header.js";
 import { createFooter } from "./footer.js";
 import { renderSingleAlbum } from "./singleAlbum.js";
-import { postNewAlbum } from "../apiHelper.js";
+import { renderPage } from "../app.js";
+import { postNewAlbum, removeArtist } from "../apiHelper.js";
 
 const renderSingleArtist = (element, artist) => {
   clearElementChildren(element);
@@ -56,6 +57,7 @@ const renderSingleArtist = (element, artist) => {
   artistAlbums.append(albumList);
   element.append(artistAlbums);
   drawFormAddAlbum(element, artist);
+  drawFormRemoveArtist(element, artist);
   element.appendChild(createFooter());
 };
 function drawFormAddAlbum(element, artist) {
@@ -93,6 +95,19 @@ function drawFormAddAlbum(element, artist) {
 
     postNewAlbum(album, artist).then((artist) => {
       renderSingleArtist(element, artist);
+    });
+  });
+}
+
+function drawFormRemoveArtist(element, artist) {
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "Delete Artist";
+  removeButton.classList.add("artist__form-delete");
+  element.append(removeButton);
+
+  removeButton.addEventListener("click", () => {
+    removeArtist(artist).then((artists) => {
+      renderPage(element, artists);
     });
   });
 }
