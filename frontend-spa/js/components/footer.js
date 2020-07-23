@@ -1,40 +1,25 @@
-const createFooter = () => {
-  const footer = document.createElement("footer");
-  footer.classList.add("footer");
-  footer.innerHTML = `
+const createFooter = ()=>{
+    const footer = document.createElement("footer");
+    footer.classList.add('footer');
+    footer.innerHTML = `
 <footer class="footer">
     <div class="footer-content">
        <h1 class="logo-text"><span>Organic</span> Sunflower</h1>
         <ul class ="footerlist">
-            <li class = "footer-button">
+            <li class="footer-button">
                 <a
-                  
                   style="text-decoration: none;"
                   alink="white"
                   vlink="white"
-                  >ARTISTS</a>
-              </li>
-              <li>
-                <a
-                  href="#albums"
-                  style="text-decoration: none;"
-                  alink="white"
-                  vlink="white"
-                  >ALBUMS</a>
-              </li>
-              <li>
-                <a href="#songs"
-                  style="text-decoration: none;"
-                  alink="white"
-                  vlink="white"
-                  >SONGS
-                </a>
+                  >HOME</a>
               </li>
         </ul>                       
       </div>
 </footer>    
-    `;
-  return footer;
-};
+    `
+    return footer;
+}
 
-export { createFooter };
+export{
+  createFooter
+}

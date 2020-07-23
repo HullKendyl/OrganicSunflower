@@ -14,7 +14,7 @@ const renderSingleAlbum = (element, album) => {
   albumView.innerHTML = `
         <div class="artist">
         <h6 class="album-h6">ALBUM</h6>
-        <h1>${album.albumTitle}</h1>
+        <h1 class="album-h1">${album.albumTitle}</h1>
         </div>
     `;
   element.append(albumView);
@@ -22,8 +22,9 @@ const renderSingleAlbum = (element, album) => {
   const artistInfo = document.createElement("div");
   artistInfo.classList.add("artist-info");
   artistInfo.innerHTML = `
-        <h3>Record Label</h3>
-        <p>${album.recordLabel}</p>
+        <h3 class="album-h3">Record Label</h3>
+        <p class="album-p">${album.recordLabel}</p>
+        <img class ="album-image2" src="${album.albumImage}">
     `;
   element.append(artistInfo);
 
@@ -31,6 +32,7 @@ const renderSingleAlbum = (element, album) => {
   albumSection.classList.add("artist-albums");
 
   const albumTitle = document.createElement("h3");
+  albumTitle.classList.add("albumTitle-h3");
   albumTitle.innerHTML = "Songs";
   albumSection.append(albumTitle);
 
@@ -38,13 +40,20 @@ const renderSingleAlbum = (element, album) => {
   album.songs.forEach((song) => {
     const li = document.createElement("li");
     li.innerHTML = `
-        ${song.songTitle}
+        <div class="line"></div>
+        <div class="span-div">
+        <span class="album-title-div2">${song.songTitle}</span>
+        </div>
         `;
     li.addEventListener("click", () => {
       renderSingleSong(element, song);
     });
     songList.append(li);
   });
+
+  const line = document.createElement("div");
+  line.classList.add("line2");
+  songList.append(line);
 
   albumSection.append(songList);
   element.append(albumSection);
@@ -66,28 +75,38 @@ const renderSingleAlbum = (element, album) => {
 };
 
 function drawFormAddSong(element, album) {
+  const createNewSong = document.createElement("div");
+  createNewSong.innerHTML = "Create New Song";
+  createNewSong.classList.add("create-song");
+  element.append(createNewSong);
+
+  const formDiv = document.createElement("div");
+  formDiv.classList.add("add-song-form");
+
   const nameInput = document.createElement("input");
   nameInput.type = "text";
   nameInput.placeholder = "Song Name";
   nameInput.classList.add("song__form-songTitle");
-  element.append(nameInput);
+  formDiv.append(nameInput);
 
   const songDuration = document.createElement("input");
   songDuration.type = "text";
   songDuration.placeholder = "Song Duration";
   songDuration.classList.add("song__form-songDuration");
-  element.append(songDuration);
+  formDiv.append(songDuration);
 
   const songLink = document.createElement("input");
   songLink.type = "text";
   songLink.placeholder = "Song Link";
   songLink.classList.add("song__form-songLink");
-  element.append(songLink);
+  formDiv.append(songLink);
 
   const submitButton = document.createElement("button");
   submitButton.innerText = "Submit";
   submitButton.classList.add("song__form-submit");
-  element.append(submitButton);
+  formDiv.append(submitButton);
+
+  element.append(formDiv);
 
   submitButton.addEventListener("click", () => {
     const song = {

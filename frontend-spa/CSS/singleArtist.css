@@ -17,7 +17,7 @@ nav .nav-2{
  
 .banner2 ul {
     display: flex; 
-    margin-left: 50%;    
+    margin-left: 75%;    
     margin-top: 25px;
     text-align: right;
     font-family: 'Open Sans', sans-serif; 
@@ -48,7 +48,7 @@ nav .nav-2{
 }
 
 .artist-li {
-    font-size: 30pt;
+    font-size: 25pt;
     margin-left: 75px;
 }
 
@@ -115,10 +115,6 @@ nav .nav-2{
     cursor: pointer;
 }
 
-footer {
-    margin-top: 300px;
-}
-
 footer .footer-content {
     display:flex;
     width: 100%;
@@ -137,9 +133,9 @@ footer .logo-text {
     text-transform: uppercase;
 }
 
-footer ul {
+footer .footerlist {
     display: flex; 
-    margin-left: 50%;    
+    margin-left: 70%;    
     margin-top: 25px;
     text-align: right;
     font-family: 'Open Sans', sans-serif; 

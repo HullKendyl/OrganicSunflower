@@ -13,16 +13,15 @@ const renderSingleSong = (element, song) => {
   songInfo.innerHTML = `
     <div class="artist-profile">
     <div class="artist">
-      <h6>Song</h6>
-      <h1>${song.songTitle}</h1>
+      <h1 class="song-h1">${song.songTitle}</h1>
     </div>
   </div>
   <div class="artist-info">
-    <h3>Duration: ${song.songDuration}</h3>
+    <h3 class="song-h3">Duration: ${song.songDuration}</h3>
   </div>
 
   <div class="artist-albums">
-    <h3>Album</h3>
+    <h3 class="album-word-h3">Album</h3>
     <ol>
       <li class="album-div">
         <img src="${song.songImage}" />

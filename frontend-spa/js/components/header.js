@@ -6,28 +6,12 @@ const createHomepageHeader = () => {
     <nav>
         <h1 class="logo-text"><span>Organic</span> Sunflower</h1>
         <ul>    
-            <li class="nav-li">
-                <a
-                href="#"
-                style="text-decoration: none;"
-                alink="white"
-                vlink="white"
-                >ALBUMS</a>
-            </li>
-            <li class="nav-li">
-                <a
-                href="#"
-                style="text-decoration: none;"
-                alink="white"
-                vlink="white"
-                >SONGS</a>
-            </li>
             <li class="nav-li home-button">
                 <a
                 style="text-decoration: none;"
                 alink="white"
                 vlink="white"
-                >ARTISTS</a>
+                >HOME</a>
             </li>
             
         </ul>  
@@ -44,32 +28,16 @@ const createHeader = () => {
   const header = document.createElement("header");
   header.classList.add("header");
   header.innerHTML = `
-      <div class="banner">
+      <div class="banner2">
       <nav>
-          <h1 class="logo-text"><span>Organic</span> Sunflower</h1>
+          <h1 class="logo-text2"><span>Organic</span> Sunflower</h1>
           <ul>    
-              <li class="nav-li2">
-                  <a
-                  href="#"
-                  style="text-decoration: none;"
-                  alink="white"
-                  vlink="white"
-                  >ALBUMS</a>
-              </li>
-              <li class="nav-li2">
-                  <a
-                  href="#"
-                  style="text-decoration: none;"
-                  alink="white"
-                  vlink="white"
-                  >SONGS</a>
-              </li>
               <li class="nav-li home-button">
                   <a
                   style="text-decoration: none;"
                   alink="white"
                   vlink="white"
-                  >ARTISTS</a>
+                  >HOME</a>
               </li>
               
           </ul>  
@@ -84,32 +52,16 @@ const createSongHeader = (song) => {
   const header = document.createElement("header");
   header.classList.add("header");
   header.innerHTML = `
-      <div class="banner">
-      <nav>
-          <h1 class="logo-text"><span>Organic</span> Sunflower</h1>
+      <div class="banner3">
+      <nav class="nav-3">
+          <h1 class="logo-text3"><span>Organic</span> Sunflower</h1>
           <ul>    
-              <li class="nav-li">
-                  <a
-                  href="#"
-                  style="text-decoration: none;"
-                  alink="white"
-                  vlink="white"
-                  >ALBUMS</a>
-              </li>
-              <li class="nav-li">
-                  <a
-                  href="#"
-                  style="text-decoration: none;"
-                  alink="white"
-                  vlink="white"
-                  >SONGS</a>
-              </li>
               <li class="nav-li home-button">
                   <a
                   style="text-decoration: none;"
                   alink="white"
                   vlink="white"
-                  >ARTISTS</a>
+                  >HOME</a>
               </li>
                         </ul>  
       </nav>
