@@ -12,7 +12,7 @@ const createAllArtistsView = (element, artists) => {
   <div class="artist-home">Artists</div>
   `;
   const allArtists = document.createElement("div");
-  artists
+  artists;
   artistSection.append(artistTitle);
   for (let i = 0; i < artists.length; i++) {
     const allArtistsView = document.createElement("div");
@@ -82,7 +82,6 @@ function drawFormAddArtist(element, artistSection) {
       songs: [],
     };
     postNewArtist(artist).then((artists) => {
-      console.log(artists);
       renderPage(element, artists);
     });
   });

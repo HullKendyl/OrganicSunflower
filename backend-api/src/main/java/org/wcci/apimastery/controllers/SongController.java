@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.wcci.apimastery.entities.Album;
 import org.wcci.apimastery.entities.Song;
+import org.wcci.apimastery.storages.AlbumStorage;
 import org.wcci.apimastery.storages.SongStorage;
 
 import java.util.Collection;
@@ -13,9 +14,11 @@ import java.util.Collection;
 @RestController
 public class SongController {
     private SongStorage songStorage;
+    private AlbumStorage albumStorage;
 
-    public SongController(SongStorage songStorage) {
+    public SongController(SongStorage songStorage, AlbumStorage albumStorage) {
         this.songStorage = songStorage;
+        this.albumStorage = albumStorage;
     }
 
     @GetMapping("/api/songs")
@@ -34,9 +37,10 @@ public class SongController {
     }
 
     @DeleteMapping("/api/songs/{id}/")
-    public Collection<Song> deleteSong(@PathVariable long id){
+    public Album deleteSong(@PathVariable long id){
+        Album album = songStorage.findSongById(id).getAlbum();
         songStorage.delete(id);
-        return songStorage.findAllSongs();
+        return albumStorage.findAlbumById(album.getId());
     }
 
 }

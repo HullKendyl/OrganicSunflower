@@ -1,19 +1,16 @@
-import{
-    clearElementChildren
-} from "../domHelper.js"
-import {
-    createSongHeader
-} from "./header.js"
-import {
-  createFooter
-} from "./footer.js"
+import { clearElementChildren } from "../domHelper.js";
+import { createSongHeader } from "./header.js";
+import { createFooter } from "./footer.js";
+import { renderPage } from "../app.js";
+import { fetchArtists, deleteSong } from "../apiHelper.js";
+import { renderSingleAlbum } from "./singleAlbum.js";
 
 const renderSingleSong = (element, song) => {
-    clearElementChildren(element);
-    element.prepend(createSongHeader(song));
+  clearElementChildren(element);
+  element.prepend(createSongHeader(song));
 
-    const songInfo = document.createElement('div');
-    songInfo.innerHTML = `
+  const songInfo = document.createElement("div");
+  songInfo.innerHTML = `
     <div class="artist-profile">
     <div class="artist">
       <h6>Song</h6>
@@ -37,10 +34,33 @@ const renderSingleSong = (element, song) => {
   </div>
     `;
 
-    element.append(songInfo);
-    element.append(createFooter());
+  element.append(songInfo);
+  drawFormDeleteSong(element, song);
+  element.append(createFooter());
+  const homeButton = document.querySelector(".home-button");
+  homeButton.addEventListener("click", () => {
+    fetchArtists().then((artists) => {
+      renderPage(element, artists);
+    });
+  });
+  const lowerHomeButton = document.querySelector(".footer-button");
+  lowerHomeButton.addEventListener("click", () => {
+    fetchArtists().then((artists) => {
+      renderPage(element, artists);
+    });
+  });
 };
 
-export {
-    renderSingleSong
+function drawFormDeleteSong(element, song) {
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "Delete Song";
+  deleteButton.classList.add("song__form-delete");
+  element.append(deleteButton);
+
+  deleteButton.addEventListener("click", () => {
+    deleteSong(song).then((album) => {
+      renderSingleAlbum(element, album);
+    });
+  });
 }
+export { renderSingleSong };

@@ -3,11 +3,11 @@ import { createHeader } from "./header.js";
 import { createFooter } from "./footer.js";
 import { renderSingleAlbum } from "./singleAlbum.js";
 import { renderPage } from "../app.js";
-import { postNewAlbum, removeArtist } from "../apiHelper.js";
+import { postNewAlbum, removeArtist, fetchArtists } from "../apiHelper.js";
 
 const renderSingleArtist = (element, artist) => {
   clearElementChildren(element);
-  element.prepend(createHeader());
+  element.prepend(createHeader(element));
 
   const artistView = document.createElement("div");
   artistView.innerHTML = `
@@ -59,6 +59,18 @@ const renderSingleArtist = (element, artist) => {
   drawFormAddAlbum(element, artist);
   drawFormRemoveArtist(element, artist);
   element.appendChild(createFooter());
+  const homeButton = document.querySelector(".home-button");
+  homeButton.addEventListener("click", () => {
+    fetchArtists().then((artists) => {
+      renderPage(element, artists);
+    });
+  });
+  const lowerHomeButton = document.querySelector(".footer-button");
+  lowerHomeButton.addEventListener("click", () => {
+    fetchArtists().then((artists) => {
+      renderPage(element, artists);
+    });
+  });
 };
 function drawFormAddAlbum(element, artist) {
   const nameInput = document.createElement("input");
@@ -91,7 +103,6 @@ function drawFormAddAlbum(element, artist) {
       albumImage: albumImage.value,
       songs: [],
     };
-    console.log(album);
 
     postNewAlbum(album, artist).then((artist) => {
       renderSingleArtist(element, artist);
