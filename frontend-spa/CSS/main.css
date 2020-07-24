@@ -109,7 +109,9 @@ nav {
   border: none;
   outline: none;
   cursor: pointer;
+  margin-bottom: 300px;
 }
+
 
 footer .footer-content {
   display: flex;
